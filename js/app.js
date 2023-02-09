@@ -9,6 +9,8 @@ function getName(){
 }
 // 5 prompt yes no questions
 
+getName();
+
 let questionOne = prompt('Am I a student at Code Fellows?').toLowerCase();
 
 if(questionOne === 'yes' || questionOne === 'y'){
@@ -49,6 +51,7 @@ if(questionFive === 'yes' || questionFive === 'y'){
   alert('Sorry, you are incorrect');
 }
 
+//question 6
 let myNum = 7;
 let chance = 4;
 let questionSix = prompt('What number (1~20) am I thinking of?');
@@ -61,25 +64,23 @@ while(guess !== myNum && chance > 1){
   } else if(guess === myNum){
     alert('Great! You are correct!');
   } else {
-    alert('What is that input??')
+    alert('What is that input??');
   }
   chance -= 1;
   questionSix = prompt(`what number (1~20) am I thinking of? (You have ${chance} chances!`);
   guess = parseInt(questionSix);
 }
 
-
+//question 7 with array and prompt loop
 let myfruitlist = ['mango', 'apple', 'peach', 'grape', 'cherry'];
 let score = 0;
 
 for(let i = 0; i < 6; i++){
   let questionSeven = prompt('guess one of my favorite fruits (type in singular!)').toLowerCase();
   for(let j=0; j < myfruitlist.length; j++){
-    if (questionSeven === myfruitlist(j)) {
+    if (questionSeven === myfruitlist[j]) {
       alert('You guessed correctly!');
       score += 1;
-    } else {
-      alert('Wrong. Guess again!');
     }
   }
 
