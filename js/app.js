@@ -48,6 +48,21 @@ if(questionFive === 'yes' || questionFive === 'y'){
   alert('Sorry, you are incorrect');
 }
 
+let myNum = 7;
+let chance = 4;
+let questionSix = prompt('What number (1~20) am I thinking of?');
+let guess = parseInt(questionSix);
+while(guess !== myNum && chance > 0){
+  if(guess > myNum){
+    alert('Your guess is too high!');
+  } else{
+    alert('Your guess is too low!');
+  }
+  chance -= 1;
+  questionSix = prompt(`what number (1~20) am I thinking of? (You have ${chance} chances!`);
+}
+
+
 
 // final message
 alert(`thank you for playin ${userName}`);
