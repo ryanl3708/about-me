@@ -8,7 +8,6 @@ function getName(){
   return userName;
 }
 // 5 prompt yes no questions
-
 getName();
 
 let questionOne = prompt('Am I a student at Code Fellows?').toLowerCase();
