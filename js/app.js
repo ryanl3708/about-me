@@ -60,6 +60,7 @@ while(guess !== myNum && chance > 0){
   }
   chance -= 1;
   questionSix = prompt(`what number (1~20) am I thinking of? (You have ${chance} chances!`);
+  guess = parseInt(questionSix);
 }
 
 
